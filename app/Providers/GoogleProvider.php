@@ -15,6 +15,7 @@ class GoogleProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Google_Client::class, function ($app) {
+            //use google client and set important params
             $client = new Google_Client();
             Storage::disk('local')->put('client_secret.json', json_encode([
                 'web' => config('services.google')
