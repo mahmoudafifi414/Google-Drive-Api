@@ -11,3 +11,4 @@ steps:
 4- run php artisan migrate
 
 5- go to (localhost:8000/home)
+
